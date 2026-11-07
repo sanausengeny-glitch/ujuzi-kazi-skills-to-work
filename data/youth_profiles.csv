@@ -1,0 +1,11 @@
+youth_id,age,location,education_level,technical_skill,experience_level,employment_status
+Y001,23,Narok,Diploma,Graphic Design,Beginner,Unemployed
+Y002,25,Nairobi,Diploma,Python,Intermediate,Employed
+Y003,21,Kisumu,Certificate,Data Entry,Beginner,Unemployed
+Y004,24,Narok,Diploma,Digital Marketing,Beginner,Self-employed
+Y005,26,Nairobi,Degree,Data Analytics,Intermediate,Unemployed
+Y006,22,Mombasa,Certificate,Computer Skills,Beginner,Unemployed
+Y007,27,Narok,Diploma,Procurement,Intermediate,Employed
+Y008,23,Kisumu,Diploma,Web Development,Beginner,Unemployed
+Y009,20,Nairobi,Certificate,Data Annotation,Beginner,Self-employed
+Y010,25,Eldoret,Diploma,Social Media Management,Intermediate,Unemployed
