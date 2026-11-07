@@ -1,43 +1,55 @@
-# Ujuzi Kazi: From Skills to Work
+# Ujuzi Kazi – Skills to Work
 
 ## Project Overview
-Ujuzi Kazi is a youth employment and skills-matching project designed to connect young people's skills with the skills employers need.
-
-The platform helps identify skills gaps and recommends relevant training pathways to improve youth employability in Kenya.
+Ujuzi Kazi is a youth employment and skills-matching platform designed to connect young people with relevant job opportunities based on their skills, education, experience and location.
 
 ## Project Objectives
-- Identify skills demanded by employers.
-- Compare employer skill requirements with youth skills.
-- Highlight skills gaps across selected counties.
-- Recommend relevant training pathways.
-- Support youth employment and decent work.
+- Identify skills gaps among young people.
+- Analyse employer skill requirements.
+- Connect youth with relevant employment opportunities.
+- Promote access to internships, freelance and remote work.
+- Use data to support youth employability.
 
-## Target Counties
-- Narok
-- Nakuru
-- Kajiado
-- Bomet
-- Nairobi
+## Live Website
+[Visit Ujuzi Kazi](https://sanausengeny-glitch.github.io/ujuzi-kazi-skills-to-work/)
 
-## Key Features
-- Employer skills demand analysis.
-- Youth skills profiles.
-- County-level skills gap analysis.
-- Training pathway recommendations.
-- County employment priorities.
-- Sustainable Development Goal 8 alignment.
-- Data protection and privacy considerations.
+## Project Structure
 
-## Data Note
-The project currently uses generated sample data for demonstration. Users can upload CSV files containing job adverts and youth profiles to explore the platform with their own data.
+- `data/` – Youth profiles and job advertisement datasets.
+- `notebooks/` – Python data analysis notebook.
+- `reports/` – Project findings and analysis summary.
+- `index.html` – Project website.
 
-## Technology
-- HTML
-- CSS
-- JavaScript
+## Datasets
+1. `job_adverts.csv`
+2. `youth_profiles.csv`
 
-## How to Use
-Open `index.html` in a web browser to explore the platform.
+**Note:** These are synthetic sample datasets created for demonstration, not verified real-world records.
 
-## Project Purpose
-To support skills development, employability, and decent work opportunities for young people in Kenya.
+## Analysis Tools
+- Python
+- Pandas
+- Matplotlib
+- Google Colab
+- GitHub
+
+## Key Findings
+The sample analysis identified:
+- 60% unemployed youth.
+- 20% employed youth.
+- 20% self-employed youth.
+- Three exact skill matches between youth profiles and employer requirements.
+
+These findings apply only to the small synthetic sample.
+
+## Recommendations
+- Strengthen practical skills training.
+- Improve youth-employer connections.
+- Promote internships and entry-level opportunities.
+- Expand access to remote and freelance work.
+
+## Project Status
+Website published and initial data analysis completed.
+
+## Author
+Ujuzi Kazi – Skills to Work Project
