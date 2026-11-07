@@ -1,0 +1,11 @@
+job_id,job_title,industry,location,required_skill,education_level,employment_type
+J001,Data Entry Clerk,ICT,Nairobi,Excel,Certificate,Full-time
+J002,Junior Graphic Designer,Creative,Narok,Canva,Diploma,Freelance
+J003,Digital Marketing Assistant,Marketing,Nairobi,Social Media Marketing,Diploma,Full-time
+J004,IT Support Assistant,ICT,Narok,Computer Skills,Diploma,Internship
+J005,Data Analyst Intern,ICT,Remote,Python,Diploma,Internship
+J006,Procurement Assistant,Supply Chain,Narok,Inventory Management,Diploma,Full-time
+J007,Social Media Manager,Marketing,Remote,Content Creation,Certificate,Freelance
+J008,Junior Web Developer,ICT,Nairobi,HTML and CSS,Diploma,Internship
+J009,AI Data Annotator,Technology,Remote,Data Annotation,Certificate,Contract
+J010,Research Assistant,Research,Kisumu,Data Collection,Diploma,Contract
