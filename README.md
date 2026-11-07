@@ -53,3 +53,10 @@ Website published and initial data analysis completed.
 
 ## Author
 Ujuzi Kazi – Skills to Work Project
+## Original Assessment Document
+
+The original project assessment document, including the completed responses, is available here:
+
+[View Ujuzi Kazi Assessment Document](https://docs.google.com/document/d/1SUq7aj8rV99o9xRCUFA_eFgEOdf8Si8wkgE7DiyYgWk/edit?usp=sharing)
+
+The document is shared for review and reference.
