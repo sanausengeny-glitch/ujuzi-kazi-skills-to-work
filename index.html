@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ujuzi Kazi: from skills to work</title>
+<meta name="description" content="Ujuzi Kazi shows young people which skills local employers ask for, and shows training partners where to invest. SDG 8, targets 8.5 and 8.6.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f3f5f9; --surface:#ffffff; --tint:#e8ebf3; --line:#d5dae6;
+  --ink:#141a2e; --ink-soft:#4d566e;
+  --brand:#4b2f96; --brand-2:#6a4cc2; --on-brand:#f3f1fb; --on-brand-soft:#c8bdf0;
+  --short:#c2410c; --short-soft:#fde3d4; --surplus:#3a62a8; --surplus-soft:#dfe8f8;
+  --ok:#23784a; --ok-soft:#d9efe2; --warn:#a2620a; --warn-soft:#f7e8cd;
+  --display:'Unbounded','Arial Black',system-ui,sans-serif;
+  --body:'Instrument Sans','Segoe UI',system-ui,-apple-system,sans-serif;
+  color-scheme:light; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0e1120; --surface:#161a2c; --tint:#1f2438; --line:#2e3450;
+    --ink:#e8eaf4; --ink-soft:#a5abc4;
+    --brand:#1d1640; --brand-2:#5b44b0; --on-brand:#ece8fb; --on-brand-soft:#ada2dc;
+    --short:#ff9a62; --short-soft:#3d2216; --surplus:#8fb0ec; --surplus-soft:#1c2843;
+    --ok:#70d59c; --ok-soft:#163223; --warn:#f2b45c; --warn-soft:#382a14; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0e1120; --surface:#161a2c; --tint:#1f2438; --line:#2e3450;
+  --ink:#e8eaf4; --ink-soft:#a5abc4;
+  --brand:#1d1640; --brand-2:#5b44b0; --on-brand:#ece8fb; --on-brand-soft:#ada2dc;
+  --short:#ff9a62; --short-soft:#3d2216; --surplus:#8fb0ec; --surplus-soft:#1c2843;
+  --ok:#70d59c; --ok-soft:#163223; --warn:#f2b45c; --warn-soft:#382a14; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit;margin:0;padding:0}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.55;font-size:16px;min-height:100%}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--brand-2);outline-offset:2px;border-radius:6px}
+h1,h2{font-family:var(--display);line-height:1.15;letter-spacing:-.01em}
+h1{font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:800}
+h2{font-size:1.35rem;font-weight:600;margin-bottom:.35rem}
+h3{font-size:1.06rem;font-weight:700;margin-bottom:.35rem}
+p{max-width:68ch}
+.muted{color:var(--ink-soft)} .small{font-size:.88rem} .num{font-variant-numeric:tabular-nums}
+
+.shell{display:flex;min-height:100%}
+.side{width:248px;flex-shrink:0;background:var(--brand);color:var(--on-brand);padding:24px 16px;position:sticky;top:0;height:100vh;overflow-y:auto;display:flex;flex-direction:column}
+.brand{display:flex;gap:10px;align-items:center}
+.brand b{font-family:var(--display);font-weight:800;font-size:1.05rem;display:block}
+.brand span{font-size:.8rem;color:var(--on-brand-soft)}
+.mark{width:40px;height:40px;border-radius:10px;background:var(--on-brand);color:var(--brand);display:grid;place-items:center;font-family:var(--display);font-weight:800;flex-shrink:0}
+.navhead{font-size:.8rem;color:var(--on-brand-soft);margin:20px 8px 6px}
+.nav button{display:flex;gap:10px;align-items:center;width:100%;text-align:left;border:0;background:none;color:var(--on-brand);padding:8px 10px;border-radius:8px;cursor:pointer;font-size:.95rem}
+.nav button:hover{background:rgba(255,255,255,.08)}
+.nav button.on{background:var(--brand-2);font-weight:700}
+.nav .ic{width:22px;text-align:center}
+.cta-side{margin-top:auto;padding-top:20px}
+.btn-side{width:100%;border:0;border-radius:10px;padding:13px 14px;background:var(--on-brand);color:var(--brand);font-weight:700;cursor:pointer;text-align:left;font-size:1rem}
+.btn-side small{display:block;font-weight:400;font-size:.78rem;opacity:.8}
+.main{flex:1;min-width:0}
+.topbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:14px 28px;border-bottom:1px solid var(--line);background:var(--surface);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+.who{display:flex;gap:10px;align-items:center}
+.av{width:38px;height:38px;border-radius:50%;background:var(--brand-2);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.85rem}
+.tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.seg{display:flex;gap:3px;background:var(--tint);padding:3px;border-radius:9px}
+.seg button{border:0;background:none;padding:6px 11px;border-radius:7px;cursor:pointer;font-size:.88rem;color:var(--ink-soft)}
+.seg button.on{background:var(--surface);color:var(--ink);font-weight:700}
+select,input[type=text]{background:var(--surface);border:1.5px solid var(--line);border-radius:8px;padding:8px 10px;min-height:42px}
+.pill{display:inline-flex;align-items:center;font-size:.8rem;padding:4px 10px;border-radius:999px;background:var(--warn-soft);color:var(--warn);font-weight:700;white-space:nowrap}
+.pill.real{background:var(--ok-soft);color:var(--ok)}
+.wrap{padding:26px 28px 60px;max-width:1180px}
+.page{display:none} .page.on{display:block}
+.lede{margin:.2rem 0 1.3rem;color:var(--ink-soft)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))} .g3{grid-template-columns:repeat(3,minmax(0,1fr))} .g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.stack>*+*{margin-top:14px}
+.btn{border:1.5px solid var(--brand-2);background:var(--surface);color:var(--ink);border-radius:9px;padding:10px 16px;cursor:pointer;font-weight:700;min-height:44px}
+.btn.primary{background:var(--brand-2);color:#fff}
+.btn.ghost{border-color:var(--line)}
+.kpi b{font-family:var(--display);font-size:1.5rem;font-weight:800;display:block;line-height:1.15}
+.kpi span{color:var(--ink-soft);font-size:.88rem}
+.note{border-left:4px solid var(--warn);background:var(--warn-soft);padding:12px 14px;border-radius:0 10px 10px 0;font-size:.92rem}
+.note.ok{border-color:var(--ok);background:var(--ok-soft)}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--ink-soft);background:var(--tint)} td.r,th.r{text-align:right} tr:last-child td{border-bottom:0}
+.tag{display:inline-block;font-size:.78rem;font-weight:700;padding:2px 8px;border-radius:6px;background:var(--tint);color:var(--ink-soft)}
+.tag.short{background:var(--short-soft);color:var(--short)} .tag.surplus{background:var(--surplus-soft);color:var(--surplus)}
+
+/* hero: the gap itself is the centrepiece */
+.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:center;background:var(--brand);color:var(--on-brand);border-radius:16px;padding:32px;margin-bottom:20px}
+.hero p{color:var(--on-brand-soft);margin:14px 0 22px;font-size:1.05rem}
+.hero .btn{border-color:var(--on-brand)}
+.hero .btn.primary{background:var(--on-brand);color:var(--brand)}
+.hero .btn.ghost{background:transparent;color:var(--on-brand)}
+.hero-gap{background:var(--surface);color:var(--ink);border-radius:12px;padding:16px}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 13px;cursor:pointer;font-size:.9rem;min-height:40px}
+.chip.on{border-color:var(--brand-2);background:var(--brand-2);color:#fff;font-weight:700}
+.chipgroup{margin-bottom:12px}
+.chipgroup h4{font-size:.86rem;color:var(--ink-soft);margin-bottom:6px;font-weight:600}
+.unlock{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
+.unlock:last-child{border-bottom:0}
+.kpi .big,.big{display:block;color:var(--ink);font-family:var(--display);font-weight:800;font-size:2.2rem;line-height:1}
+
+.chart svg{width:100%;height:auto;display:block}
+.chart text{font-family:var(--body);font-size:11.5px;fill:var(--ink-soft)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.84rem;color:var(--ink-soft);margin-top:8px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:5px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:10px 18px;border-radius:10px;font-weight:700;display:none;z-index:30}
+.toast.on{display:block}
+pre.fmt{background:var(--tint);border-radius:8px;padding:10px 12px;font-size:.8rem;overflow-x:auto;margin-top:8px}
+
+@media (max-width:900px){
+  .shell{flex-direction:column}
+  .side{width:100%;height:auto;position:static;padding:14px 14px 8px}
+  .navhead,.cta-side,.brand span{display:none}
+  .navs{display:flex;overflow-x:auto;gap:4px;margin-top:10px}
+  .nav{display:flex;gap:4px} .nav button{white-space:nowrap;width:auto}
+  .hero{grid-template-columns:1fr;padding:22px}
+  .g3,.g4{grid-template-columns:1fr 1fr}
+  .wrap,.topbar{padding-left:16px;padding-right:16px}
+  .topbar{position:static}
+}
+@media (max-width:600px){.g2,.g3,.g4{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="side">
+    <div class="brand"><div class="mark">U</div><div><b>Ujuzi Kazi</b><span>From skills to work</span></div></div>
+    <div class="navs">
+      <div class="navhead">For young people</div>
+      <nav class="nav">
+        <button data-p="home"><span class="ic">🏠</span>Home</button>
+        <button data-p="check"><span class="ic">🧭</span>Check my skills</button>
+        <button data-p="training"><span class="ic">🎓</span>Training routes</button>
+      </nav>
+      <div class="navhead">Evidence</div>
+      <nav class="nav">
+        <button data-p="demand"><span class="ic">📋</span>What employers ask for</button>
+        <button data-p="youth"><span class="ic">👥</span>Youth profiles</button>
+        <button data-p="gap"><span class="ic">📊</span>The skills gap</button>
+        <button data-p="method"><span class="ic">🧪</span>Method &amp; your data</button>
+      </nav>
+      <div class="navhead">For partners</div>
+      <nav class="nav">
+        <button data-p="county"><span class="ic">🗺️</span>County priorities</button>
+        <button data-p="impact"><span class="ic">🌱</span>SDG 8 impact</button>
+        <button data-p="charter"><span class="ic">🔐</span>Data charter</button>
+      </nav>
+    </div>
+    <div class="cta-side"><button class="btn-side" onclick="go('check')">🧭 Check my skills<small>See which jobs you match</small></button></div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="who"><div class="av" id="av">YP</div><div><div style="font-weight:700" id="whoName">Young person</div><div class="muted small" id="whoRole">Looking for work or training</div></div></div>
+      <div class="tools">
+        <span class="pill" id="dataPill">Sample data</span>
+        <select id="countySel" aria-label="County"></select>
+        <div class="seg" id="roleSeg" aria-label="View as">
+          <button data-r="youth" class="on">Young person</button>
+          <button data-r="partner">Programme officer</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <section class="page" id="p-home">
+        <div class="hero">
+          <div>
+            <h1>See the skills local employers ask for, and the ones you’re missing.</h1>
+            <p>Ujuzi Kazi compares the skills in local job adverts with the skills young people actually have. Young people see which training opens the most jobs. Training partners see where to put their money.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn primary" onclick="go('check')">Check my skills</button><button class="btn ghost" onclick="go('gap')">See the skills gap</button></div>
+          </div>
+          <div class="hero-gap" id="heroGap"></div>
+        </div>
+        <div class="grid g4" id="homeKpis"></div>
+        <h2 style="margin-top:28px">The problem we’re solving</h2>
+        <div class="grid g3" style="margin-top:10px">
+          <div class="card"><h3>Training follows habit, not jobs</h3><p class="small muted">Many young people train in the same few skills, while local employers struggle to fill roles that need different ones.</p></div>
+          <div class="card"><h3>Nobody sees the whole picture</h3><p class="small muted">Job adverts and youth data sit in different places. Without putting them side by side, the mismatch stays invisible.</p></div>
+          <div class="card"><h3>Rural youth get the least guidance</h3><p class="small muted">Career advice and labour-market data focus on cities. A young person in a rural county has little to go on when choosing training.</p></div>
+        </div>
+      </section>
+
+      <section class="page" id="p-check">
+        <h2>Check my skills</h2>
+        <p class="lede">Pick the skills you have. We compare them with job adverts in your county and show which one new skill would open the most jobs. Nothing you pick leaves this browser.</p>
+        <div class="grid g2">
+          <div class="card"><div id="skillPicker"></div><button class="btn ghost" id="clearSkills">Clear my skills</button></div>
+          <div class="card" id="checkResult"></div>
+        </div>
+      </section>
+
+      <section class="page" id="p-training">
+        <h2>Training routes</h2>
+        <p class="lede">Ways to learn each in-demand skill. Routes are types of training, so a young person can look for the nearest option.</p>
+        <div id="trainingBody"></div>
+      </section>
+
+      <section class="page" id="p-demand">
+        <h2>What employers ask for</h2>
+        <p class="lede" id="demandLede"></p>
+        <div id="demandBody"></div>
+      </section>
+
+      <section class="page" id="p-youth">
+        <h2>Youth profiles</h2>
+        <p class="lede">Who the young people in the data are, what they do now, and the skills they have.</p>
+        <div id="youthBody"></div>
+      </section>
+
+      <section class="page" id="p-gap">
+        <h2>The skills gap</h2>
+        <p class="lede">For each skill: the share of job adverts that ask for it, minus the share of young people who have it. Orange means employers want more of it than young people have. Blue means more young people have it than adverts ask for.</p>
+        <div id="gapBody"></div>
+      </section>
+
+      <section class="page" id="p-method">
+        <h2>Method &amp; your data</h2>
+        <p class="lede">How the numbers are made, how we checked them, and how to replace the sample data with real data.</p>
+        <div id="methodBody"></div>
+      </section>
+
+      <section class="page" id="p-county">
+        <h2>County priorities</h2>
+        <p class="lede">For training providers, NGOs and county planners: which skills to fund training for first.</p>
+        <div id="countyBody"></div>
+      </section>
+
+      <section class="page" id="p-impact">
+        <h2>SDG 8: Decent work and economic growth</h2>
+        <p class="lede">Ujuzi Kazi targets one SDG and two of its targets.</p>
+        <div class="grid g2">
+          <div class="card"><h3>Target 8.5</h3><p class="small">Achieve full and productive employment and decent work for all women and men, <b>including for young people</b>.</p><p class="small muted" style="margin-top:8px">How we contribute: young people choose training that matches real local jobs.</p></div>
+          <div class="card"><h3>Target 8.6</h3><p class="small">Substantially reduce the proportion of <b>youth not in employment, education or training</b>.</p><p class="small muted" style="margin-top:8px">How we contribute: training partners aim courses at skills that lead to work, so fewer young people train for jobs that aren’t there.</p></div>
+        </div>
+        <h3 style="margin-top:24px">What this prototype shows today</h3>
+        <div class="grid g4" id="impactNow" style="margin-top:8px"></div>
+        <div class="note" style="margin-top:14px" id="impactNote"></div>
+        <h3 style="margin-top:24px">What a pilot would measure</h3>
+        <div class="table-wrap" style="margin-top:8px"><table><thead><tr><th>Indicator</th><th>Why it matters</th></tr></thead><tbody>
+          <tr><td>Young people who complete a skills check</td><td>Reach, especially in rural counties</td></tr>
+          <tr><td>Share who start training in a shortage skill</td><td>Shows the guidance changes choices</td></tr>
+          <tr><td>Share in work or self-employment 6 months later</td><td>The outcome that matters (8.5)</td></tr>
+          <tr><td>Change in the share not in work, education or training</td><td>Directly tracks target 8.6</td></tr>
+          <tr><td>Training places funded in shortage skills</td><td>Shows partners use the evidence</td></tr>
+        </tbody></table></div>
+      </section>
+
+      <section class="page" id="p-charter">
+        <h2>Data charter</h2>
+        <p class="lede">Data about young people looking for work is personal. These rules follow the principles of Kenya’s Data Protection Act, 2019.</p>
+        <div class="grid g2">
+          <div class="card"><h3>Skills checks stay private</h3><p class="small muted">The skills a young person picks are used in their own browser to show results. They aren’t sent or stored anywhere else.</p></div>
+          <div class="card"><h3>Profiles are anonymous</h3><p class="small muted">Youth profiles hold county, age, sex, education, status and skills. No names, phone numbers or ID numbers.</p></div>
+          <div class="card"><h3>Consent for any survey</h3><p class="small muted">Real youth profiles are only collected from people who agree, and only shown as counts and shares.</p></div>
+          <div class="card"><h3>Small groups stay hidden</h3><p class="small muted">In a real deployment, any breakdown with fewer than 5 people is hidden so no one can be identified.</p></div>
+          <div class="card"><h3>Public adverts only</h3><p class="small muted">Job adverts come from public listings. We record the skills asked for, not the employer’s private details.</p></div>
+          <div class="card"><h3>Honest about the data</h3><p class="small muted">The dataset in this prototype is generated. Every page says so until real data is loaded.</p></div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------- helpers ---------- */
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pct=v=>Math.round(v*100)+'%';
+function prng(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('on'),2600)}
+
+/* ---------- skills and training routes ---------- */
+const SKILLS=[
+ ['excel','Microsoft Excel','Digital'],['dataentry','Data entry','Digital'],['computer','Basic computer use','Digital'],['socialmedia','Social media marketing','Digital'],['graphic','Graphic design','Digital'],['webdev','Web development','Digital'],['dataanalysis','Data analysis','Digital'],
+ ['electrical','Electrical installation','Trades'],['plumbing','Plumbing','Trades'],['welding','Welding','Trades'],['tailoring','Tailoring','Trades'],['hair','Hairdressing and beauty','Trades'],
+ ['agri','Agribusiness','Farming and tourism'],['guiding','Tour guiding','Farming and tourism'],['hospitality','Hospitality and cooking','Farming and tourism'],
+ ['bookkeeping','Bookkeeping','Business'],['customer','Customer service','Business'],['sales','Sales','Business'],['driving','Driving licence','Business']
+].map(([k,n,c])=>({k,n,c}));
+const SK=Object.fromEntries(SKILLS.map(s=>[s.k,s]));
+const ROUTES={
+  'Digital':['Free online short course (4 to 8 weeks)','Bootcamp or tech-skills programme','Computer course at a local college'],
+  'Trades':['Vocational training centre (TVET) certificate','Apprenticeship with a local business','Trade test certification'],
+  'Farming and tourism':['Short course at a TVET or agricultural college','Work placement with a lodge, camp or farm','Mentoring through a youth group or co-operative'],
+  'Business':['Short business course or evening class','On-the-job training in a shop or SACCO','Driving school (for a licence)']
+};
+const TITLES={excel:'Office assistant',dataentry:'Data clerk',computer:'Cyber café attendant',socialmedia:'Social media assistant',graphic:'Junior designer',webdev:'Junior web developer',dataanalysis:'Data analyst intern',electrical:'Electrician assistant',plumbing:'Plumber',welding:'Welder',tailoring:'Tailor',hair:'Salon attendant',agri:'Farm supervisor',guiding:'Tour guide',hospitality:'Lodge kitchen assistant',bookkeeping:'Bookkeeper',customer:'Customer care assistant',sales:'Sales agent',driving:'Driver'};
+const COUNTIES=['Narok','Nakuru','Kajiado','Bomet','Nairobi'];
+
+/* ---------- sample data (deterministic) ---------- */
+function weighted(r,w){const tot=Object.values(w).reduce((a,b)=>a+b,0);let x=r()*tot;for(const k in w){x-=w[k];if(x<=0)return k}return Object.keys(w)[0]}
+function pickN(r,w,n){const w2={...w},out=[];for(let i=0;i<n;i++){const k=weighted(r,w2);out.push(k);delete w2[k]}return out}
+function buildSample(){
+  const r=prng(808);
+  const D={
+    Narok:{guiding:9,hospitality:9,customer:7,driving:6,agri:6,sales:5,computer:5,excel:4,dataentry:4,bookkeeping:4,electrical:3,socialmedia:3,plumbing:2,dataanalysis:2,welding:1,tailoring:1,hair:1,graphic:1,webdev:1},
+    Nakuru:{agri:7,driving:6,customer:6,sales:6,electrical:5,excel:5,welding:4,dataentry:4,bookkeeping:4,computer:4,plumbing:3,hospitality:3,socialmedia:3,dataanalysis:2,graphic:1,webdev:1,tailoring:1,hair:1,guiding:1},
+    Kajiado:{hospitality:6,agri:6,driving:6,electrical:5,customer:5,guiding:4,plumbing:4,sales:4,excel:3,computer:3,welding:3,bookkeeping:3,dataentry:2,socialmedia:2,dataanalysis:1,graphic:1,webdev:1,tailoring:1,hair:1},
+    Bomet:{agri:9,sales:5,driving:5,bookkeeping:4,customer:4,computer:4,electrical:3,excel:3,dataentry:3,tailoring:2,plumbing:2,welding:2,hospitality:2,socialmedia:2,hair:1,dataanalysis:1,graphic:1,webdev:1,guiding:1},
+    Nairobi:{excel:8,customer:8,sales:7,dataanalysis:6,webdev:6,socialmedia:6,computer:6,dataentry:5,bookkeeping:5,graphic:4,driving:4,hospitality:4,electrical:3,plumbing:2,welding:2,hair:2,agri:1,tailoring:1,guiding:.5}
+  };
+  const S={computer:9,hair:7,tailoring:6,socialmedia:6,sales:5,customer:4,hospitality:4,agri:4,dataentry:3,driving:2,excel:2,graphic:2,electrical:2,guiding:2,plumbing:1,welding:1.5,bookkeeping:1.5,webdev:1,dataanalysis:.7};
+  const nAds={Narok:40,Nakuru:25,Kajiado:20,Bomet:15,Nairobi:40}, nYouth={Narok:120,Nakuru:50,Kajiado:50,Bomet:50,Nairobi:50};
+  const ads=[], youth=[];
+  const months=[...Array(12)].map((_,i)=>{const d=new Date(Date.UTC(2025,10+i,1));return d.toISOString().slice(0,7)});
+  COUNTIES.forEach(c=>{
+    for(let i=0;i<nAds[c];i++){
+      const skills=pickN(r,D[c],2+Math.floor(r()*3)), main=skills[0];
+      ads.push({id:'AD'+String(ads.length+1).padStart(3,'0'),title:TITLES[main],sector:SK[main].c,county:c,month:months[Math.floor(r()*12)],entry_level:r()<.55,min_education:weighted(r,{'Secondary':5,'TVET certificate':3,'Diploma':2,'Degree':1}),skills});
+    }
+    const sw={...S}; if(c==='Narok'){sw.guiding+=2;sw.agri+=1} if(c==='Bomet')sw.agri+=3; if(c==='Nairobi'){sw.webdev+=1.5;sw.graphic+=1;sw.agri=1}
+    for(let i=0;i<nYouth[c];i++){
+      const edu=weighted(r,{'Primary':2,'Secondary':6,'TVET certificate':2.5,'Diploma':1.5,'Degree':1});
+      youth.push({id:'Y'+String(youth.length+1).padStart(3,'0'),county:c,age:18+Math.floor(r()*17),sex:r()<.5?'Female':'Male',education:edu,
+        status:weighted(r,{'Employed':22,'Self-employed':18,'Unemployed':42,'In education or training':18}),skills:pickN(r,sw,1+Math.floor(r()*3))});
+    }
+  });
+  return {ads,youth,source:'sample'};
+}
+const SAMPLE=buildSample();
+
+/* ---------- data store: sample or uploaded ---------- */
+const STORE='ujuzigap-v1';
+let DATA={ads:SAMPLE.ads,youth:SAMPLE.youth,adsSource:'sample',youthSource:'sample'};
+try{const raw=localStorage.getItem(STORE);if(raw){const v=JSON.parse(raw);if(v.ads&&v.ads.length)DATA.ads=v.ads,DATA.adsSource='yours';if(v.youth&&v.youth.length)DATA.youth=v.youth,DATA.youthSource='yours';}}catch(e){}
+function persist(){try{localStorage.setItem(STORE,JSON.stringify({ads:DATA.adsSource==='yours'?DATA.ads:null,youth:DATA.youthSource==='yours'?DATA.youth:null}))}catch(e){toast('This browser couldn’t keep the data')}}
+const isSample=()=>DATA.adsSource==='sample'||DATA.youthSource==='sample';
+function updatePill(){const p=$('#dataPill');if(!isSample()){p.textContent='Your data';p.classList.add('real')}else if(DATA.adsSource==='yours'||DATA.youthSource==='yours'){p.textContent='Partly sample data';p.classList.remove('real')}else{p.textContent='Sample data';p.classList.remove('real')}}
+
+/* ---------- calculations ---------- */
+let state={county:'Narok',role:'youth',mine:[]};
+try{const m=JSON.parse(localStorage.getItem(STORE+'-mine')||'[]');if(Array.isArray(m))state.mine=m.filter(k=>SK[k])}catch(e){}
+const inCounty=(rows,c)=>c==='All counties'?rows:rows.filter(x=>x.county===c);
+function shares(rows){const n=rows.length||1,o={};SKILLS.forEach(s=>o[s.k]=rows.filter(x=>x.skills.includes(s.k)).length/n);return o}
+function gapFor(c){
+  const A=inCounty(DATA.ads,c), Y=inCounty(DATA.youth,c), d=shares(A), s=shares(Y);
+  return SKILLS.map(sk=>({k:sk.k,n:sk.n,c:sk.c,demand:d[sk.k],supply:s[sk.k],gap:d[sk.k]-s[sk.k],ads:A.filter(a=>a.skills.includes(sk.k)).length})).sort((a,b)=>b.gap-a.gap);
+}
+const neet=y=>y.status==='Unemployed';
+function rankCorr(a,b){ // Spearman on two arrays
+  const rank=v=>{const idx=v.map((x,i)=>[x,i]).sort((p,q)=>q[0]-p[0]);const r=[];idx.forEach(([x,i],j)=>r[i]=j+1);return r};
+  const ra=rank(a),rb=rank(b),n=a.length;const d2=ra.reduce((s,x,i)=>s+(x-rb[i])**2,0);return 1-6*d2/(n*(n*n-1));
+}
+
+/* ---------- charts ---------- */
+function hBars(items,{max,fmt=v=>v,color='var(--brand-2)',lw=170}={}){
+  const W=560,rowH=26,h=items.length*rowH+8;max=max||Math.max(1e-9,...items.map(i=>i.v));
+  return '<div class="chart"><svg viewBox="0 0 '+W+' '+h+'" role="img">'+items.map((it,i)=>{const y=i*rowH+4,w=(W-lw-60)*it.v/max;
+    return '<text x="'+(lw-8)+'" y="'+(y+16)+'" text-anchor="end">'+esc(it.l)+'</text><rect x="'+lw+'" y="'+(y+3)+'" width="'+Math.max(w,1)+'" height="17" rx="3" style="fill:'+(it.c||color)+'"/><text x="'+(lw+w+6)+'" y="'+(y+16)+'" style="fill:var(--ink);font-weight:700">'+fmt(it.v)+'</text>'}).join('')+'</svg></div>';
+}
+function divBars(items,{lw=170}={}){
+  const W=560,rowH=26,h=items.length*rowH+8,mid=lw+(W-lw)/2,max=Math.max(.01,...items.map(i=>Math.abs(i.v))),half=(W-lw)/2-44;
+  let g='<line x1="'+mid+'" x2="'+mid+'" y1="0" y2="'+h+'" style="stroke:var(--line)"/>';
+  items.forEach((it,i)=>{const y=i*rowH+4,w=half*Math.abs(it.v)/max,pos=it.v>=0,x=pos?mid:mid-w;
+    g+='<text x="'+(lw-8)+'" y="'+(y+16)+'" text-anchor="end">'+esc(it.l)+'</text><rect x="'+x+'" y="'+(y+3)+'" width="'+Math.max(w,1)+'" height="17" rx="3" style="fill:'+(pos?'var(--short)':'var(--surplus)')+'"/><text x="'+(pos?mid+w+5:mid-w-5)+'" y="'+(y+16)+'" text-anchor="'+(pos?'start':'end')+'" style="fill:var(--ink);font-weight:700">'+(pos?'+':'−')+Math.abs(Math.round(it.v*100))+'</text>'});
+  return '<div class="chart"><svg viewBox="0 0 '+W+' '+h+'" role="img">'+g+'</svg></div><div class="legend"><span><i style="background:var(--short)"></i>Shortage: adverts ask for it more than young people have it</span><span><i style="background:var(--surplus)"></i>Surplus</span><span>Numbers are percentage points</span></div>';
+}
+function vBars(items,{max,fmt=v=>v,h=200}={}){
+  const W=520,L=10,B=34,T=18;max=max||Math.max(1,...items.map(i=>i.v));const bw=(W-L*2)/items.length;
+  return '<div class="chart"><svg viewBox="0 0 '+W+' '+h+'" role="img">'+items.map((it,i)=>{const bh=(h-B-T)*it.v/max,x=L+i*bw+bw*.18,w=bw*.64,y=h-B-bh;
+    return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+Math.max(bh,1)+'" rx="4" style="fill:'+(it.c||'var(--brand-2)')+'"/><text x="'+(x+w/2)+'" y="'+(y-5)+'" text-anchor="middle" style="fill:var(--ink);font-weight:700">'+fmt(it.v)+'</text><text x="'+(x+w/2)+'" y="'+(h-14)+'" text-anchor="middle">'+esc(it.l)+'</text>'}).join('')+'</svg></div>';
+}
+
+/* ---------- navigation and roles ---------- */
+const VIEWS=['home','check','training','demand','youth','gap','method','county','impact','charter'];
+function go(v){if(location.hash!=='#'+v)location.hash=v;else show(v)}
+function show(v){
+  if(!VIEWS.includes(v))v='home';
+  $$('.page').forEach(p=>p.classList.toggle('on',p.id==='p-'+v));
+  $$('[data-p]').forEach(b=>b.classList.toggle('on',b.dataset.p===v));
+  ({home:renderHome,check:renderCheck,training:renderTraining,demand:renderDemand,youth:renderYouth,gap:renderGap,method:renderMethod,county:renderCounty,impact:renderImpact}[v]||(()=>{}))();
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',()=>show(location.hash.slice(1)));
+$$('[data-p]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.p)));
+$('#countySel').innerHTML=COUNTIES.concat('All counties').map(c=>'<option>'+c+'</option>').join('');
+$('#countySel').onchange=e=>{state.county=e.target.value;show(location.hash.slice(1)||'home')};
+$$('#roleSeg button').forEach(b=>b.onclick=()=>{
+  state.role=b.dataset.r;$$('#roleSeg button').forEach(x=>x.classList.toggle('on',x===b));
+  const p=state.role==='youth'?['Young person','Looking for work or training','YP']:['Programme officer','Training partner or county planner','PO'];
+  $('#whoName').textContent=p[0];$('#whoRole').textContent=p[1];$('#av').textContent=p[2];
+  go(state.role==='youth'?'check':'county');
+});
+const where=()=>state.county==='All counties'?'all five counties':state.county;
+const sampleNote=()=>isSample()?'<div class="note" style="margin-top:14px">This page uses generated sample data. It shows how the dashboard works, not real conditions in '+esc(where())+'. Load real data on the Method page.</div>':'';
+
+/* ---------- pages ---------- */
+function renderHome(){
+  const g=gapFor(state.county);
+  $('#heroGap').innerHTML='<b>Biggest skill shortages in '+esc(where())+'</b><div class="muted small" style="margin-bottom:6px">Share of adverts asking for the skill, minus share of young people who have it</div>'+hBars(g.slice(0,5).map(x=>({l:x.n,v:x.gap})),{fmt:v=>'+'+Math.round(v*100)+' points',color:'var(--short)',lw:160});
+  const A=inCounty(DATA.ads,state.county),Y=inCounty(DATA.youth,state.county);
+  $('#homeKpis').innerHTML=[[A.length,'Job adverts analysed'],[Y.length,'Young people in the data'],[Y.length?pct(Y.filter(neet).length/Y.length):'n/a','Unemployed and not in training'],[g.filter(x=>x.gap>.05).length,'Skills in short supply']].map(k=>'<div class="card kpi"><b class="num">'+k[0]+'</b><span>'+k[1]+'</span></div>').join('');
+}
+
+function renderCheck(){
+  const cats=[...new Set(SKILLS.map(s=>s.c))];
+  $('#skillPicker').innerHTML='<h3>My skills</h3>'+cats.map(c=>'<div class="chipgroup"><h4>'+c+'</h4><div class="chips">'+SKILLS.filter(s=>s.c===c).map(s=>'<button class="chip'+(state.mine.includes(s.k)?' on':'')+'" data-k="'+s.k+'" aria-pressed="'+state.mine.includes(s.k)+'">'+esc(s.n)+'</button>').join('')+'</div></div>').join('');
+  $$('.chip').forEach(b=>b.onclick=()=>{const k=b.dataset.k;state.mine=state.mine.includes(k)?state.mine.filter(x=>x!==k):state.mine.concat(k);try{localStorage.setItem(STORE+'-mine',JSON.stringify(state.mine))}catch(e){}renderCheck()});
+  $('#clearSkills').onclick=()=>{state.mine=[];try{localStorage.removeItem(STORE+'-mine')}catch(e){}renderCheck()};
+  const A=inCounty(DATA.ads,state.county), has=new Set(state.mine);
+  const full=A.filter(a=>a.skills.every(k=>has.has(k))), part=A.filter(a=>!a.skills.every(k=>has.has(k))&&a.skills.filter(k=>has.has(k)).length*2>=a.skills.length);
+  const unlock=SKILLS.filter(s=>!has.has(s.k)).map(s=>({s,n:A.filter(a=>a.skills.includes(s.k)&&a.skills.every(k=>k===s.k||has.has(k))).length,any:A.filter(a=>a.skills.includes(s.k)).length})).sort((a,b)=>b.n-a.n||b.any-a.any).slice(0,3);
+  $('#checkResult').innerHTML=!state.mine.length?'<h3>Your results</h3><p class="muted">Pick at least one skill to see the jobs you match in '+esc(where())+'.</p>':
+    '<h3>Your results in '+esc(where())+'</h3><div class="grid g2" style="margin:10px 0 6px"><div class="kpi"><span class="big num">'+full.length+'</span><span>adverts you fully match</span></div><div class="kpi"><span class="big num">'+part.length+'</span><span>adverts you half match</span></div></div><p class="small muted">Out of '+A.length+' adverts.</p>'+
+    '<h3 style="margin-top:16px">One new skill that opens the most jobs</h3>'+unlock.map((u,i)=>'<div class="unlock"><div><b>'+(i+1)+'. '+esc(u.s.n)+'</b><div class="small muted">'+esc(ROUTES[u.s.c][0])+'</div></div><div style="text-align:right"><b class="num">+'+u.n+'</b><div class="small muted">adverts fully matched</div></div></div>').join('')+
+    '<button class="btn" style="margin-top:12px" onclick="go(\'training\')">See training routes</button>'+(isSample()?'<p class="small muted" style="margin-top:10px">Results use sample adverts.</p>':'');
+}
+
+function renderTraining(){
+  const g=gapFor(state.county);
+  const cats=[...new Set(SKILLS.map(s=>s.c))];
+  $('#trainingBody').innerHTML='<div class="grid g2">'+cats.map(c=>{const top=g.filter(x=>x.c===c).slice(0,3);
+    return '<div class="card"><h3>'+c+'</h3><p class="small muted">Most needed in '+esc(where())+': '+top.map(t=>esc(t.n)+' <span class="tag '+(t.gap>0?'short':'surplus')+'">'+(t.gap>0?'+':'−')+Math.abs(Math.round(t.gap*100))+'</span>').join(', ')+'</p><ul class="small" style="margin:10px 0 0 18px">'+ROUTES[c].map(r=>'<li>'+esc(r)+'</li>').join('')+'</ul></div>'}).join('')+'</div>'+
+    '<div class="note" style="margin-top:14px">Training partners can add named local providers, costs and dates here. These are route types, not recommendations of a specific provider.</div>';
+}
+
+function renderDemand(){
+  const A=inCounty(DATA.ads,state.county), d=shares(A);
+  $('#demandLede').textContent=A.length+' job adverts in '+where()+'. Each advert is coded with the skills it asks for.';
+  if(!A.length){$('#demandBody').innerHTML='<div class="note">No adverts for this county yet. Load adverts on the Method page.</div>';return}
+  const top=SKILLS.map(s=>({l:s.n,v:d[s.k]})).sort((a,b)=>b.v-a.v).slice(0,10);
+  const sec=[...new Set(SKILLS.map(s=>s.c))].map(c=>({l:c.replace('Farming and tourism','Farming, tourism'),v:A.filter(a=>a.sector===c).length}));
+  const edu=['Secondary','TVET certificate','Diploma','Degree'].map(e=>({l:e,v:A.filter(a=>a.min_education===e).length}));
+  $('#demandBody').innerHTML='<div class="grid g2"><div class="card"><h3>Skills most asked for</h3><p class="small muted">Share of adverts</p>'+hBars(top,{max:1,fmt:pct})+'</div>'+
+    '<div class="stack"><div class="card"><h3>Adverts by sector</h3>'+vBars(sec)+'</div><div class="card"><h3>Minimum education asked for</h3>'+vBars(edu)+'</div><div class="card kpi"><b class="num">'+pct(A.filter(a=>a.entry_level).length/A.length)+'</b><span>of adverts are open to beginners</span></div></div></div>'+sampleNote();
+}
+
+function renderYouth(){
+  const Y=inCounty(DATA.youth,state.county);
+  if(!Y.length){$('#youthBody').innerHTML='<div class="note">No youth profiles for this county yet.</div>';return}
+  const st=['Employed','Self-employed','Unemployed','In education or training'].map((s,i)=>({l:s.replace('In education or training','In training'),v:Y.filter(y=>y.status===s).length,c:i===2?'var(--short)':'var(--brand-2)'}));
+  const edu=['Primary','Secondary','TVET certificate','Diploma','Degree'].map(e=>{const g=Y.filter(y=>y.education===e);return {l:e.replace(' certificate',''),v:g.length?g.filter(neet).length/g.length:0}});
+  const sex=['Female','Male'].map(s=>{const g=Y.filter(y=>y.sex===s);return {l:s,v:g.length?g.filter(neet).length/g.length:0}});
+  const s=shares(Y), top=SKILLS.map(k=>({l:k.n,v:s[k.k]})).sort((a,b)=>b.v-a.v).slice(0,10);
+  $('#youthBody').innerHTML='<div class="grid g2"><div class="card"><h3>What young people are doing now</h3>'+vBars(st)+'</div><div class="card"><h3>Skills young people have</h3><p class="small muted">Share of young people</p>'+hBars(top,{max:1,fmt:pct,color:'var(--surplus)'})+'</div>'+
+    '<div class="card"><h3>Unemployed and not in training, by education</h3>'+vBars(edu,{max:1,fmt:pct})+'</div><div class="card"><h3>Unemployed and not in training, by sex</h3>'+vBars(sex,{max:1,fmt:pct})+'</div></div>'+sampleNote();
+}
+
+function renderGap(){
+  const g=gapFor(state.county);
+  $('#gapBody').innerHTML='<div class="card">'+divBars(g.map(x=>({l:x.n,v:x.gap})))+'</div>'+
+   '<h3 style="margin:20px 0 8px">Full table</h3><div class="table-wrap"><table><thead><tr><th>Skill</th><th class="r">Adverts asking</th><th class="r">Young people with it</th><th class="r">Gap (points)</th><th class="r">Adverts</th></tr></thead><tbody>'+
+   g.map(x=>'<tr><td>'+esc(x.n)+'</td><td class="r">'+pct(x.demand)+'</td><td class="r">'+pct(x.supply)+'</td><td class="r"><span class="tag '+(x.gap>=0?'short':'surplus')+'">'+(x.gap>=0?'+':'−')+Math.abs(Math.round(x.gap*100))+'</span></td><td class="r">'+x.ads+'</td></tr>').join('')+'</tbody></table></div>'+sampleNote();
+}
+
+function stability(){
+  const A=inCounty(DATA.ads,state.county), months=[...new Set(A.map(a=>a.month))].sort(), mid=months[Math.floor(months.length/2)];
+  const first=A.filter(a=>a.month<mid), second=A.filter(a=>a.month>=mid);
+  if(first.length<10||second.length<10) return null;
+  const s1=shares(first), s2=shares(second);
+  const top=k=>SKILLS.slice().sort((a,b)=>k[b.k]-k[a.k]).slice(0,5).map(s=>s.k);
+  const overlap=top(s1).filter(k=>top(s2).includes(k)).length;
+  return {rho:rankCorr(SKILLS.map(s=>s1[s.k]),SKILLS.map(s=>s2[s.k])),n1:first.length,n2:second.length,overlap,mid};
+}
+function renderMethod(){
+  const st=stability();
+  $('#methodBody').innerHTML=
+   '<div class="grid g2"><div class="card"><h3>How the gap is calculated</h3><p class="small">For each skill in a county: <b>gap = share of job adverts asking for the skill − share of young people who have it</b>. A positive gap is a shortage. Adverts can ask for several skills, and young people can have several.</p></div>'+
+   '<div class="card"><h3>Data in use</h3><p class="small">Job adverts: <b>'+(DATA.adsSource==='sample'?'generated sample':'your uploaded file')+'</b> ('+DATA.ads.length+' adverts).<br>Youth profiles: <b>'+(DATA.youthSource==='sample'?'generated sample':'your uploaded file')+'</b> ('+DATA.youth.length+' people).</p><p class="small muted" style="margin-top:6px">The sample was generated with a fixed seed, so results are repeatable. It is not real data.</p></div></div>'+
+   '<div class="card" style="margin-top:16px"><h3>Is the demand picture stable?</h3>'+(st?'<p class="small">We split adverts in '+esc(where())+' by date: '+st.n1+' before '+st.mid+' and '+st.n2+' from '+st.mid+'. If skill demand is a real pattern and not noise, both halves should rank skills similarly.</p><div class="grid g2" style="margin-top:10px"><div class="kpi"><b class="num">'+st.rho.toFixed(2)+'</b><span>Rank correlation between the halves (1 is identical, 0 is no relation)</span></div><div class="kpi"><b class="num">'+st.overlap+' of 5</b><span>Top-5 skills that appear in both halves</span></div></div>'+(isSample()?'<div class="note" style="margin-top:12px">With sample data this check is high by design, because the sample was generated from fixed patterns. Run it again on real adverts: that result is the one to present.</div>':'')
+     :'<p class="small muted">Needs at least 10 adverts in each half of the period. Choose a county with more adverts, or “All counties”.</p>')+'</div>'+
+   '<div class="card" style="margin-top:16px"><h3>Load real data</h3><p class="small">Upload CSV files in the formats below. Every chart updates straight away. Files stay in this browser.</p>'+
+   '<div class="grid g2" style="margin-top:12px"><div><b class="small">Job adverts</b><pre class="fmt">advert_id,title,sector,county,month,entry_level,min_education,skills\nAD001,Tour guide,Farming and tourism,Narok,2026-03,yes,Secondary,guiding;customer</pre><input type="file" id="upAds" accept=".csv,text/csv" aria-label="Upload job adverts CSV"></div>'+
+   '<div><b class="small">Youth profiles</b><pre class="fmt">youth_id,county,age,sex,education,status,skills\nY001,Narok,22,Female,Secondary,Unemployed,computer;hair</pre><input type="file" id="upYouth" accept=".csv,text/csv" aria-label="Upload youth profiles CSV"></div></div>'+
+   '<p class="small muted" style="margin-top:10px">Skill codes: '+SKILLS.map(s=>s.k).join(', ')+'. Counties: '+COUNTIES.join(', ')+'. Status: Employed, Self-employed, Unemployed, In education or training.</p>'+
+   '<button class="btn ghost" style="margin-top:12px" id="backSample">Go back to sample data</button></div>';
+  $('#upAds').onchange=e=>loadCSV(e,'ads');$('#upYouth').onchange=e=>loadCSV(e,'youth');
+  $('#backSample').onclick=()=>{DATA={ads:SAMPLE.ads,youth:SAMPLE.youth,adsSource:'sample',youthSource:'sample'};persist();updatePill();toast('Back to sample data');renderMethod()};
+}
+function parseCSV(text){
+  const rows=[];let row=[],f='',q=false;
+  for(let i=0;i<text.length;i++){const c=text[i];
+    if(q){if(c==='"'){if(text[i+1]==='"'){f+='"';i++}else q=false}else f+=c}
+    else if(c==='"')q=true;else if(c===','){row.push(f);f=''}else if(c==='\n'||c==='\r'){if(c==='\r'&&text[i+1]==='\n')i++;row.push(f);f='';if(row.some(x=>x.trim()))rows.push(row);row=[]}else f+=c}
+  row.push(f);if(row.some(x=>x.trim()))rows.push(row);
+  const head=rows.shift().map(h=>h.trim().toLowerCase());
+  return rows.map(r=>Object.fromEntries(head.map((h,i)=>[h,(r[i]||'').trim()])));
+}
+function loadCSV(e,kind){
+  const file=e.target.files[0];if(!file)return;
+  const rd=new FileReader();
+  rd.onload=()=>{try{
+    const rows=parseCSV(rd.result), skills=v=>String(v||'').split(/[;|]/).map(x=>x.trim().toLowerCase()).filter(k=>SK[k]);
+    let out;
+    if(kind==='ads') out=rows.map((r,i)=>({id:r.advert_id||'AD'+(i+1),title:r.title||'',sector:r.sector||(SK[skills(r.skills)[0]]||{}).c||'',county:r.county,month:r.month||'',entry_level:/^(y|yes|true|1)$/i.test(r.entry_level||''),min_education:r.min_education||'',skills:skills(r.skills)})).filter(a=>a.county&&a.skills.length);
+    else out=rows.map((r,i)=>({id:r.youth_id||'Y'+(i+1),county:r.county,age:+r.age||null,sex:r.sex||'',education:r.education||'',status:r.status||'',skills:skills(r.skills)})).filter(y=>y.county);
+    if(!out.length){toast('No usable rows. Check the column names and skill codes');return}
+    DATA[kind]=out;DATA[kind==='ads'?'adsSource':'youthSource']='yours';persist();updatePill();
+    toast(out.length+(kind==='ads'?' adverts loaded':' profiles loaded'));renderMethod();
+  }catch(err){toast('That file couldn’t be read as CSV')}};
+  rd.readAsText(file);
+}
+
+function renderCounty(){
+  const g=gapFor(state.county), A=inCounty(DATA.ads,state.county);
+  const short=g.filter(x=>x.gap>0).slice(0,5), surplus=g.slice().reverse().filter(x=>x.gap<0).slice(0,3);
+  $('#countyBody').innerHTML='<div class="grid g2"><div class="card"><h3>Fund training here first: '+esc(where())+'</h3>'+
+   short.map((x,i)=>'<div class="unlock"><div><b>'+(i+1)+'. '+esc(x.n)+'</b><div class="small muted">Asked for in '+x.ads+' of '+A.length+' adverts. '+pct(x.supply)+' of young people have it.</div></div><span class="tag short">+'+Math.round(x.gap*100)+' points</span></div>').join('')+'</div>'+
+   '<div class="card"><h3>Already well supplied</h3><p class="small muted">More young people have these skills than adverts ask for. New training places here may not lead to jobs.</p>'+
+   surplus.map(x=>'<div class="unlock"><div><b>'+esc(x.n)+'</b><div class="small muted">'+pct(x.supply)+' of young people, '+pct(x.demand)+' of adverts</div></div><span class="tag surplus">−'+Math.abs(Math.round(x.gap*100))+' points</span></div>').join('')+'</div></div>'+
+   '<h3 style="margin:22px 0 8px">Counties compared</h3><div class="table-wrap"><table><thead><tr><th>County</th><th class="r">Adverts</th><th class="r">Young people</th><th class="r">Unemployed, not training</th><th>Biggest shortage</th></tr></thead><tbody>'+
+   COUNTIES.map(c=>{const Y=inCounty(DATA.youth,c),top=gapFor(c)[0];return '<tr><td>'+c+'</td><td class="r">'+inCounty(DATA.ads,c).length+'</td><td class="r">'+Y.length+'</td><td class="r">'+(Y.length?pct(Y.filter(neet).length/Y.length):'n/a')+'</td><td>'+esc(top.n)+' (+'+Math.round(top.gap*100)+')</td></tr>'}).join('')+'</tbody></table></div>'+sampleNote();
+}
+
+function renderImpact(){
+  const g=gapFor('All counties');
+  $('#impactNow').innerHTML=[[DATA.ads.length,'Job adverts coded by skill'],[DATA.youth.length,'Youth profiles analysed'],[g.filter(x=>x.gap>.05).length,'Shortage skills identified'],[COUNTIES.length,'Counties compared']].map(k=>'<div class="card kpi"><b class="num">'+k[0]+'</b><span>'+k[1]+'</span></div>').join('');
+  $('#impactNote').textContent=isSample()?'These counts come from generated sample data. They show the method works, not that anyone has found work yet. Real outcomes need a pilot.':'These counts come from the data your team loaded. Outcomes for young people still need a pilot to measure.';
+}
+
+/* ---------- start ---------- */
+updatePill();
+show(location.hash.slice(1)||'home');
+</script>
+</body>
+</html>
